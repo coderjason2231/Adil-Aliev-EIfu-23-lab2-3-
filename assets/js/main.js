@@ -186,6 +186,28 @@
 
   window.addEventListener("load", initSwiper);
 
+
+
+
+
+
+  /**
+ * Interactive Clock
+ */
+function updateClock() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  const clockElement = document.querySelector('#clock');
+  if (clockElement) {
+    clockElement.textContent = timeString;
+  }
+}
+setInterval(updateClock, 1000);
+updateClock(); // Initialize the clock
+
+
+
+
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */

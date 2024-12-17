@@ -7,10 +7,6 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
-    <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -51,73 +47,98 @@
   ======================================================== -->
   </head>
 
-<body class="index-page">
-  <header id="header" class="header dark-background d-flex flex-column align-items-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <body class="index-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <div class="profile-img">
-      <img
-        src="images/adil-my-profile.jpg"
-        alt="Profile Picture"
-        class="img-fluid rounded-circle"
-      />
-    </div>
+      <div class="profile-img">
+        <img
+          src="images/adil-my-profile.jpg"
+          alt=""
+          class="img-fluid rounded-circle"
+        />
+      </div>
 
-    <a
-      href="index.html"
-      class="logo d-flex align-items-center justify-content-center"
-    >
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt="Site Logo"> -->
-      <h1 class="sitename">Adil Aliev</h1>
-    </a>
+      <a
+        href="index.html"
+        class="logo d-flex align-items-center justify-content-center"
+      >
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Adil Aliev</h1>  
+      </a>
 
-    <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-google"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
+      <div class="social-links text-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li>
-          <a href="#hero" class="active"
-            ><i class="bi bi-house navicon"></i>Home</a
-          >
-        </li>
-        <li>
-          <a href="#about"><i class="bi bi-person navicon"></i> About</a>
-        </li>
-        <li>
-          <a href="#resume"
-            ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
-          >
-        </li>
-        <li>
-          <a href="#portfolio"
-            ><i class="bi bi-images navicon"></i> Portfolio</a
-          >
-        </li>
-        <li>
-          <a href="#services"
-            ><i class="bi bi-hdd-stack navicon"></i> Services</a
-          >
-        </li>
-        <li>
-          <a href="#contact"
-            ><i class="bi bi-envelope navicon"></i> Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
-  </header>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#hero" class="active"
+              ><i class="bi bi-house navicon"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+          </li>
+          <li>
+            <a href="#resume"
+              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio"
+              ><i class="bi bi-images navicon"></i> Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#services"
+              ><i class="bi bi-hdd-stack navicon"></i> Services</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#"
+              ><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i
+            ></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown">
+                <a href="#"
+                  ><span>Deep Dropdown</span>
+                  <i class="bi bi-chevron-down toggle-dropdown"></i
+                ></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#contact"
+              ><i class="bi bi-envelope navicon"></i> Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <img src="images/codingbackground.jpg" alt="" data-aos="fade-in" class="" />
+        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="" />
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <h2>Adil Aliev</h2>
@@ -220,42 +241,6 @@
               </p>
             </div>
           </div>
-
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <mrow>
-              <mi>f</mi>
-              <mo>(</mo>
-              <mi>a</mi>
-              <mo>)</mo>
-              <mo>=</mo>
-              <mfrac>
-                <mrow>
-                  <mn>1</mn>
-                </mrow>
-                <mrow>
-                  <mn>2</mn>
-                  <mi>&#x3c0;</mi> <!-- Pi symbol -->
-                  <mi>i</mi>
-                </mrow>
-              </mfrac>
-              <mo>&#x222e;</mo> <!-- Contour integral symbol -->
-              <mfrac>
-                <mrow>
-                  <mi>f</mi>
-                  <mo>(</mo>
-                  <mi>z</mi>
-                  <mo>)</mo>
-                </mrow>
-                <mrow>
-                  <mi>z</mi>
-                  <mo>&#x2212;</mo> <!-- Minus sign -->
-                  <mi>a</mi>
-                </mrow>
-              </mfrac>
-              <mi>d</mi>
-              <mi>z</mi>
-            </mrow>
-          </math>
         </div>
       </section>
       <!-- /About Section -->
@@ -568,16 +553,67 @@
 
 <style>
   /* Dark Mode Styles */
-  body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  body.dark-mode a {
-    color: #bb86fc;
-  }
-  body.dark-mode a:hover {
-    color: #ffffff;
-  }
+ /* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+body.dark-mode a:hover {
+  color: #ffffff;
+}
+
+/* Fix for hero section */
+body.dark-mode .hero {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark mode for all sections */
+body.dark-mode section,
+body.dark-mode .section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Adjust headings in dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+}
+
+/* Buttons and cards in dark mode */
+body.dark-mode .btn {
+  background-color: #bb86fc;
+  color: #121212;
+  border-color: #bb86fc;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+/* Adjust cards, surfaces, and sections */
+body.dark-mode .card,
+body.dark-mode .surface,
+body.dark-mode .portfolio,
+body.dark-mode .skills,
+body.dark-mode .resume,
+body.dark-mode .services {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #2e2e2e;
+}
+
 </style>
 
 
@@ -639,7 +675,7 @@
                       ><i class="bi bi-zoom-in"></i
                     ></a>
                     <a
-                      href="https://www.sololearn.com/en/"
+                      href="portfolio-details.html"
                       title="More Details"
                       class="details-link"
                       ><i class="bi bi-link-45deg"></i
@@ -824,7 +860,7 @@
           <div>
             <h4 class="title">Custom Video</h4>
             <video controls width="100%">
-              <source src="/images/Coding video.mp4" type="video/mp4">
+              <source src="videos/custom-video.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -865,8 +901,6 @@
         </div>
       </section>
       <!-- /Services Section -->
-    
-
 
       <!-- Testimonials Section -->
       <section id="testimonials" class="testimonials section light-background">
@@ -1057,7 +1091,7 @@
                   </div>
                 </div>
                 <!-- End Info Item -->
-                
+
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -1082,9 +1116,6 @@
                     <p>info@example.com</p>
                   </div>
                 </div>
-
-                <div id="clock"></div>
-
                 <!-- End Info Item -->
 
                 <iframe
@@ -1175,7 +1206,7 @@
         <div class="copyright text-center">
           <p>
             © <span>Copyright</span>
-            <strong class="px-1 sitename">Adil Aliev </strong>
+            <strong class="px-1 sitename">iPortfolio</strong>
             <span>All Rights Reserved</span>
           </p>
         </div>
@@ -1184,21 +1215,9 @@
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          LInked in <a href="https://www.linkedin.com/">Page of owner</a>
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
-
-        
-      <math xmlns="http://www.w3.org/1998/Math/MathML">
-        <mrow>
-          <msup><mi>x</mi><mn>2</mn></msup>
-          <mo>+</mo>
-          <mn>4</mn>
-        </mrow>
-      </math>
-      
-
-      
     </footer>
 
     <!-- Scroll Top -->
@@ -1211,11 +1230,6 @@
 
     <!-- Preloader -->
     <div id="preloader"></div>
-
-
-    <script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

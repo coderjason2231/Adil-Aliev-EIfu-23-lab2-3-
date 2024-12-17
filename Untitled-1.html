@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Work 12</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2f;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #00c3ff;
+            text-shadow: 5px 2px 4px rgb(7, 2, 48);
+        }
+
+        .form-container {
+            background: #29293d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px #12121a, -4px -4px 10px #2a2a3d;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+
+        input, button {
+            font-size: 14px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input {
+            background: #1e1e2f;
+            color: #f0f0f0;
+            border: 1px solid #444;
+        }
+
+        button {
+            background-color: #00c3ff;
+            color: #1e1e2f;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #00ffbb;
+        }
+
+        .results {
+            margin-top: 20px;
+            background: #29293d;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .average {
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .average.red { color: red; }
+        .average.orange { color: orange; }
+        .average.green { color: green; }
+    </style>
+</head>
+<body>
+    <h1>ADIL ALIYEV</h1>
+
+    <div class="form-container">
+        <h2>Contact Form</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <!-- Numeric attributes -->
+            <label for="num1">Numeric Attribute 1:</label>
+            <input type="number" id="num1" name="num1" required>
+
+            <label for="num2">Numeric Attribute 2:</label>
+            <input type="number" id="num2" name="num2" required>
+
+            <label for="num3">Numeric Attribute 3:</label>
+            <input type="number" id="num3" name="num3" required>
+
+            <label for="num4">Numeric Attribute 4:</label>
+            <input type="number" id="num4" name="num4" required>
+
+            <label for="num5">Numeric Attribute 5:</label>
+            <input type="number" id="num5" name="num5" required>
+
+            <button type="button" onclick="handleForm()">Submit</button>
+        </form>
+    </div>
+
+    <div class="results" id="results" style="display: none;">
+        <h2>Submitted Data</h2>
+        <p id="resultText"></p>
+        <p id="averageResult" class="average"></p>
+    </div>
+
+    <script>
+        function handleForm() {
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value.trim(),
+                surname: document.getElementById('surname').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                address: document.getElementById('address').value.trim(),
+                numeric: [
+                    parseFloat(document.getElementById('num1').value),
+                    parseFloat(document.getElementById('num2').value),
+                    parseFloat(document.getElementById('num3').value),
+                    parseFloat(document.getElementById('num4').value),
+                    parseFloat(document.getElementById('num5').value)
+                ]
+            };
+
+            // Validation for email, phone, and address
+            const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+            const phonePattern = /^\d{10,15}$/; // Simple phone number pattern
+
+            if (!emailPattern.test(formData.email)) {
+                alert('Invalid email format!');
+                return;
+            }
+
+            if (!phonePattern.test(formData.phone)) {
+                alert('Invalid phone format! Enter 10-15 digits.');
+                return;
+            }
+
+            if (formData.address.length < 5) {
+                alert('Address must be at least 5 characters long!');
+                return;
+            }
+
+            // Calculate average of numeric attributes
+            const total = formData.numeric.reduce((a, b) => a + b, 0);
+            const average = total / formData.numeric.length;
+
+            // Display results
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('resultText').textContent = `
+                Name: ${formData.name} ${formData.surname}
+                Email: ${formData.email}
+                Phone: ${formData.phone}
+                Address: ${formData.address}
+            `;
+
+            // Format average result
+            const averageElement = document.getElementById('averageResult');
+            averageElement.textContent = `${formData.name} ${formData.surname} (${formData.email}): Average = ${average.toFixed(2)}`;
+            if (average < 5) {
+                averageElement.className = 'average red';
+            } else if (average >= 5 && average < 8) {
+                averageElement.className = 'average orange';
+            } else {
+                averageElement.className = 'average green';
+            }
+
+            // Log data to console
+            console.log(formData);
+        }
+    </script>
+</body>
+</html>
